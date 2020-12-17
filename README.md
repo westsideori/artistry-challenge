@@ -18,3 +18,8 @@ After modifying the schema, these are your deliverables:
 4) There should be an index page for all the instruments, where the name of all the instruments should be listed out, alongside each of their classifications.
 
 5) I should also be able to save a new artist into the database. While it's possible for an artist to have the same name, an artist must have a name. An artist must also have an unique title. After successfully creating an artist, I should be taken to the artist's show page.
+
+# validates :artist_id, :instrument_id, presence: true
+
+# validates :name, :classification, presence: true
+# validates :name, uniqueness: true

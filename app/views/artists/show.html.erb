@@ -1,0 +1,22 @@
+<h1><%= @artist.name %></h1>
+
+<h2>Title:</h2>
+<%= @artist.title %>
+<br>
+<h2>Age:</h2>
+<%= @artist.age %>
+<br>
+
+<h2>Instruments:</h2>
+<ul>
+<% @artist.instruments.each do |instrument| %>
+    <li><%= link_to instrument.name, instrument_path(instrument) %></li>
+    <% end %>
+</ul>
+
+<%= button_to 'Add Instrument to Artist', new_artist_instrument_path, method: :get %>
+<br>
+
+<%= button_to 'Delete Artist', artist_path(@artist), method: :delete  %>
+
+<%= link_to 'All Artists', artists_path %>
